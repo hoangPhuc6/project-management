@@ -29,7 +29,6 @@ export default function UploadFilesCard({
 }: UploadFilesCardProps) {
   const [files, setFiles] = useState<File[]>([])
   const [deleteIds, setDeleteIds] = useState<number[]>([])
-  const [linkLabel, setLinkLabel] = useState('')
   const [linkUrl, setLinkUrl] = useState('')
   const [isDragging, setIsDragging] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -41,7 +40,6 @@ export default function UploadFilesCard({
       setIsEditing(false)
       setFiles([])
       setDeleteIds([])
-      setLinkLabel('')
       setLinkUrl('')
       setError(null)
     }
@@ -135,7 +133,6 @@ export default function UploadFilesCard({
     setIsEditing(false)
     setFiles([])
     setDeleteIds([])
-    setLinkLabel('')
     setLinkUrl('')
     setError(null)
   }
@@ -144,7 +141,6 @@ export default function UploadFilesCard({
     setIsEditing(true)
     setFiles([])
     setDeleteIds([])
-    setLinkLabel('')
     setLinkUrl('')
     setError(null)
   }
